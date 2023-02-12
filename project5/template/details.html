@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>EMPLOYEE DETAILS</h1>
+    {% if info %}
+    <table border="2">
+    <thead>
+      <th>ID</th>
+      <td>EMP_NAME</td>
+      <td>EMP_SALARY</td>
+      <td>EMP_ADDRESS</td>
+    </thead>
+    {% for emp in info %}
+    <tr>
+      <td>{{emp.id}}</td>
+      <td>{{emp.EmpName}}</td>
+      <td>{{emp.EmpSalary}}</td>
+      <td>{{emp.EmpAddress}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    {% else %}
+    <h1>NOT FOUND<h1>
+    {% endif %}  
+  </body>
+</html>
