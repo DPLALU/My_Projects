@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>MOBILE DETAILS</h1>
+    {% if Info %}
+    <table border="2">
+      <thead>
+        <th>ID</th>
+        <td>MOBILE_NAME</td>
+        <td>MOBILE_PRICE</td>
+        <td>MOBILE_BRAND</td>
+        <td>MOBILE_COLOR</td>
+      </thead>
+      {% for mobile in Info %}
+      <tr>
+        <th>{{mobile.id}}</th>
+        <td>{{mobile.MobileName}}</td>
+        <td>{{mobile.MobilePrice}}</td>
+        <td>{{mobile.MobileModel}}</td>
+        <td>{{mobile.MobileColor}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <h1>NO DETAILS FOUND</h1>
+    {% endif %}
+  </body>
+</html>
