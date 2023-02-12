@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    <title></title>
+  </head>
+  <body>
+    <h1> KINGFISHER FLIGHT DETAILS</h1>
+    <ul>
+      <li>FlightNumber = {{flightNO}}</li>
+      <li>FlightName = {{flightName}}</li>
+      <li>Destination = {{destination}}</li>
+    </ul>
+    <img src="{% static "kingfisher.jpg" %}">
+  </body>
+</html>
